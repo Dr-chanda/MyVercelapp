@@ -1,70 +1,36 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-h1 {
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-}
-
-input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #007BFF;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charlman-MD Session ID</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Glowing Text</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+        }
+        .glow {
+            font-size: 2em;
+            color: white;
+            text-align: center;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white, 0 0 60px white, 0 0 70px white;
+            }
+            to {
+                text-shadow: 0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white, 0 0 60px white, 0 0 70px white, 0 0 80px white;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Charlman-MD Vercel App</h1>
-        <form id="sessionForm">
-            <label for="sessionId">Enter your SESSION_ID:</label>
-            <input type="text" id="sessionId" name="sessionId" required>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-    <script src="script.js"></script>
+    <div class="glow">Hi, IT'S DR-CHANDA +27635915524..!</div>
 </body>
-</html>document.getElementById('sessionForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const sessionId = document.getElementById('sessionId').value;
-    alert('SESSION_ID: ' + sessionId);
-});
+</html>
